@@ -1,0 +1,65 @@
+@mixin flex-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin margin-top {
+  margin-top: 2rem;
+}
+@mixin transition {
+  transition: 0.3s all;
+}
+@mixin main-btn {
+  background: none;
+  background-color: none;
+  border: none;
+  height: 3rem;
+  text-transform: uppercase;
+  width: 10rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+@mixin main-btn-before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $main-yellow;
+  transform: scaleX(0);
+  transform-origin: 50%;
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+}
+@mixin main-header {
+  font-size: 6rem;
+  font-weight: bold;
+  color: $text-color;
+
+}
+@mixin sub-header {
+    font-size: 3rem;
+    color: $text-color;
+    font-weight: bold;
+}
+@mixin main-paragraph {
+      color: $text-color;
+      padding: 1rem 0;
+      font-size: 1.3rem;
+}

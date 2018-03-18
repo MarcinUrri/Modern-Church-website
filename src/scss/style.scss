@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import "variables";
+@import "mixins";
+
+.main-header{
+  @include main-header;
+}
+.sub-header{
+  @include sub-header;
+}
+.main-paragraph{
+  @include main-paragraph;
+}
+.main-btn{
+  @include main-btn;
+  border: 2px $text-color solid;
+  color: $text-color;
+  width: 7rem;
+  outline: none;
+  &:hover{
+    color: black;
+    border: $main-yellow;
+  }
+}
+.main-btn:before{
+  @include main-btn-before;
+}
+.main-btn:hover:before{
+-webkit-transform: scaleX(1);
+transform: scaleX(1);
+}

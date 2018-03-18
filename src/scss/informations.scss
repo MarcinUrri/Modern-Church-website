@@ -1,0 +1,103 @@
+@import "mixins";
+@import "variables";
+.informations{
+      @include margin-top ;
+  background-image: url(../img/bg-img-1.jpg);
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include flex-horizontal;
+}
+.informations-inner{
+    @include margin-top ;
+    @include flex-horizontal;
+    flex-wrap: wrap;
+    width: 60%;
+    box-shadow: 0px 0px 18px 4px
+     rgba(0,0,0,0.75);
+    .informations-content{
+      width: 50%;
+      height: 23rem;
+      background-color: $text-color;
+      text-align: center;
+      @include flex-vertical;
+      border: 1px solid rgb(229, 231, 233);
+      img{
+        width: 10%;
+        margin-bottom: 1rem;
+      }
+      .informations-icon{
+        color: $main-yellow;
+        font-size: 3rem;
+        padding: 1rem;
+      }
+      .sub-header{
+        color: $off-black-text;
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+        &:hover{
+          color: $background-hover;
+          cursor: pointer;
+          @include transition;
+        }
+      }
+      .main-paragraph{
+        color: $grey-paragraph-text;
+        font-size: 1rem;
+        max-width: 50%;
+        line-height: 1.5rem;
+      }
+      span{
+        font-size: 1.3rem;
+        position: relative;
+        &:hover{
+          color: $background-hover;
+          cursor: pointer;
+          @include transition;
+        }
+        &:hover img{
+          margin-left: 0.5rem;
+          @include transition;
+        }
+        img{
+          width: 25%;
+          padding-top: 1rem;
+          position: absolute;
+          bottom: -90%;
+          left: 110%;
+        }
+      }
+    }
+}
+@media screen and (max-width: 990px) {
+  .informations-inner{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .informations{
+    height: 100rem;
+  }
+  .informations-inner{
+    @include flex-vertical;
+    width: 80%;
+    .informations-content{
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width:420px) {
+  .informations-inner{
+    width: 90%;
+    .informations-content{
+      img{
+        width: 20%;
+      }
+      .sub-header{
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
