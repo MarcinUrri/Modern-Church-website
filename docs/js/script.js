@@ -19,6 +19,13 @@ $( document ).ready(function() {
       navigationPanel.toggle();
   	});
 
+
+    navigationPanel.click(function(){
+      $(this).toggle();
+      $('#hamburger').toggleClass('open');
+    });
+
+
 });
 
 function initMap() {

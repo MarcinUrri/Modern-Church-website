@@ -18,6 +18,9 @@ $( document ).ready(function() {
   		$(this).toggleClass('open');
       navigationPanel.toggle();
   	});
+    navigationPanel.click(function(){
+      $(this).toggle();
+    })
 
 });
 
