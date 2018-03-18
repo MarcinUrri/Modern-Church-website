@@ -20,10 +20,13 @@ $( document ).ready(function() {
   	});
 
 
-    navigationPanel.click(function(){
-      $(this).toggle();
-      $('#hamburger').toggleClass('open');
-    });
+        navigationPanel.click(function(){
+          if ($( window ).width() <990) {
+          $(this).toggle();
+          $('#hamburger').toggleClass('open');
+        }
+      });
+
 
 
 });
