@@ -51,7 +51,6 @@ gulp.task('css', function(){
 gulp.task('js', function(){
     return gulp.src('src/js/**/*.js')
     .pipe(concat('script.js'))
-    .pipe(uglify())
     .pipe(gulp.dest('docs/js'))
     .pipe(browserSync.stream());
 });

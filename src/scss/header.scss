@@ -189,8 +189,11 @@
   left: 8px;
 }
 .main-nav{
+          display: none;
   ul{
-        @include flex-vertical;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         background-color: #3f3f3f;
         left:-16rem;
