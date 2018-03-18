@@ -1,3 +1,5 @@
 # Modern-Church-website
 
-Example Website created from online design. Technology used: HTML, CSS, jQuery.
+Example Website. Technology used: HTML, CSS, jQuery.
+
+https://marcinurri.github.io/Modern-Church-website/
